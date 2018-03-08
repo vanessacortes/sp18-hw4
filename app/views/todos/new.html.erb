@@ -1,0 +1,14 @@
+<div class="create_task_index">
+  <div class="title"> Add New Task </div>
+  <div class="create_task">
+    <%= form_for(@todo) do |f| %>
+    <%= f.label :task %>: <br />
+    <%= f.text_field :tasks %>
+  </div>
+  <div class="create_task">
+    <%= f.label :finished %> ? <br />
+    <%= f.check_box :finished %>
+  </div>
+  <%= f.submit %>
+    <% end %>
+</div>

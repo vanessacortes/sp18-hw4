@@ -1,0 +1,45 @@
+<div>
+  <div class="title">
+    <h2> Keepin' Track of Your Todos (& Cats) </h2> <br>
+  </div>
+  <div class="pages_index">
+    <div class="section list_section">
+      <h2> Users: </h2>
+        <ul>
+        <% @users.each do |u| %>
+          <li>
+            <strong> Username: </strong> <%= u.username %> <br>
+            <strong> Email: </strong> <%= u.email %> <br>
+            <strong> Age: </strong> <%= u.age %> <br>
+            <br>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="section list_section">
+      <h2 >Cats: </h2>
+        <ul>
+        <% @cats.each do |c| %>
+          <li>
+            <strong> Name: </strong> <%= c.name %><br>
+            <br>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="section todo_section">
+      <strong><h2>Todos:</h2></strong>
+      <button> <%= link_to "Add new task", todos_new_path, :class => "btn btn-primary" %> </button>
+        <ul>
+        <% @todos.each do |t| %>
+            <li>
+              <strong>Task: </strong> <%= t.tasks %> <br>
+              <strong>Finished: </strong> <%= t.finished %><br>
+            </li> <br>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
